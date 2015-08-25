@@ -1,0 +1,13 @@
+COMMANDS:
+GET HOSTNAME:
+hostname
+GET IPV4:
+ifconfig eth0| grep "inet6 " | awk -F " " '{print $2}'
+GET IPV6:
+ifconfig eth0| grep "inet6 " | awk -F " " '{print $2}'
+GET CURRENT TIME:
+date
+GET UPTIME: 
+cat /proc/uptime | awk -F " " '{print $1}'
+GET TEMPERATURE
+/opt/vc/bin/vcgencmd measure_temp | awk -F "[=']" '{print $2}'

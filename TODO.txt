@@ -1,0 +1,22 @@
+MONDAY:
+✔Use a python script to generate the .json file, as well as to decode the .json file containing sent commands.
+TUESDAY:
+✔Use sockets instead of HTTP requests when sending FROM the Pis to reduce overhead dramatically. (Likely 1/4 bandwidth used)
+WEDNESDAY:
+✔Implement a request system instead of making assumptions about incoming/outgoing data.
+*Look into authentication and crypto options.
+THURSDAY:
+✘Use WebSockets to do the same thing on the client's side.
+SUSPENDED: Low Priority.
+FRIDAY:
+✘Allow the Pi to return terminal output as part of a separate update.
+
+MONDAY:
+✘Create a config file to allow the user to change the interval on WebUI and the Pi
+TUESDAY:
+✘Have the server create a master .json file containing basic information about each device.
+WEDNESDAY:
+✘Create a webpage that lists all devices as well as basic information.
+
+MISC:
+✔Compress variable names and de-sort them to squeeze down the filesize.

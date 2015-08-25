@@ -1,0 +1,24 @@
+Client WebSocket Exchange:
+
+Client opens WebSocket to server:50001.
+Client sends CLI:hostname (i.e. CLI:alarmpi)
+Server sends either OK, AUTH? or NO
+    OK: Client will prepare to receive data from the server.
+    AUTH?: Client will attempt to exchange authentication info.
+    NO: Requested device or resource does not exist.
+    
+    AUTH process:
+        Figure out the best way to establish a secure line in the socket.
+        Then just send a password as PASS:
+        (this won't be done until much later)
+        
+    NO process:
+        Clientside displays an error.
+        
+    OK process:
+        Separate thread using the socket reads until dry, splits by newlines, iterates through the split string and sends a parsed json of each string to updateStats(json)
+        This loops indefinitely.
+        
+
+(For future implementation:)
+Client sends usual command data through to the server. Besides the basic reception code recycled code should be applicable.

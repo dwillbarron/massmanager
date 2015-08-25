@@ -1,0 +1,185 @@
+.PageHead {
+    font-weight: normal;
+    font-size:  3em;
+    font-family: sans-serif;
+    text-align: left;
+}
+#DeviceList{
+	width: 200px;
+	margin-right: 5px;
+	float: right;
+	margin-bottom: 2px;
+}
+#CommandSend{
+	padding-left: 0px;
+	padding-right: 0px;
+	text-align:center;
+}
+.termHeader{
+	display: block;
+	width: 442px;
+	text-align: left;
+
+	font-size: 1.2em;
+	position: absolute;
+	z-index: -1;
+}
+h2{
+	font-size: 1.5em;
+	margin-bottom: 10px;
+}
+#StatsRoot{
+	width: 371px;
+}
+.DeviceSwitcher{
+	float:right;
+	text-align:right;
+}
+select.DeviceSwitcher{
+	width: 135px;
+}
+.classStats {
+	width: 371px;
+	max-height: 500px;
+	margin-left: auto;
+	overflow: scroll;
+	padding-right: 5px;
+	margin-right: auto;
+	float:left;
+	animation-name: growStats;
+	animation-duration: 0.5s;
+	margin-bottom:5px;
+}
+@keyframes shrinkDiv {
+    from {
+        opacity:1;
+        }
+	to {
+		max-height: 0px;
+		opacity: 0;
+		}
+}
+@keyframes growDiv { 
+	from {
+		height:0px;
+		opacity:0;
+	}
+	to{
+		height:250px;
+		opacity:1;
+	}
+}
+@keyframes growStats {
+	from {
+		height:0px;
+		opacity:0;
+	}
+	to{
+		height:500px;
+		opacity:1;
+	}
+}
+.removeDiv { 
+	animation-name: shrinkDiv !important;
+	animation-duration: 0.5s;
+	/*height:0px;*/
+
+}
+.optionsMenu{
+	width: 474px;
+	margin-left: auto;
+	margin-right: auto;
+	float:right;
+	/* padding-bottom: 45px; */
+}
+.optionButtons{
+	padding-left: 5px;
+	padding-top: 5px;
+	padding-bottom: 8px;
+	width: 449px;
+	/* float:left; */
+}
+div{
+	word-wrap: break-word;
+	padding-left: 20px;
+	padding-bottom: 20px;
+	border: 1px solid rgba(0, 0, 0, 0.53);
+	background-color: rgba(0, 0, 0, 0.05);
+	font-family: sans-serif;
+}
+body{
+	width: 900px;
+	margin-left: auto;
+	margin-right: auto;
+}
+p{
+	margin-left: 20px;
+	margin-top: 5px;
+	margin-bottom: 14px;
+}
+#CommandSend{
+	width: 48px;
+	float:left;
+}
+#CommandEntry{
+	float:left;
+	width: 396px;
+	font-family: monospace;
+}
+.terminal{
+    font-family: monospace;
+    width: 432px;
+    height: 203px;
+    overflow: scroll;
+    position: relative;
+    padding: inherit;
+}
+.noPadding{
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin: 0 0 0 0;
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+form {
+    margin-bottom: 4px;
+}
+.termOption{
+	margin-top:3px;
+	float:right;
+}
+input.termOption{
+	margin-top:5px;
+}
+button {
+    color: rgba(0, 0, 0, 1);
+    background-color: rgba(166, 166, 166, 0.38);
+    border: 1px solid;
+    border-color: rgba(0, 0, 0, 0.34);
+    margin-top: 2px;
+    margin-right: -2px;
+    margin-left: 4px;
+    width: 30px;
+    float: right;
+    white-space: nowrap;
+	font-size:0.8em;
+    padding-top: 3px;
+	padding-bottom: 3px;
+	padding: 3px 0px 3px 0px;
+}
+
+.termDiv {
+	width: 442px;
+	height: 230px;
+	max-height: 230;
+	border: none;
+	overflow: hidden;
+	padding-right: 10px;
+	background-color: rgba(0,0,0,0);
+	animation-name: growDiv;
+	animation-duration: 0.5s;
+	margin-bottom: 0px;
+}
