@@ -3,8 +3,11 @@
 ##Setup
 
 Edit the script and change the following settings to fit your needs: 
+
 updateRate: Minimal time in seconds between sending updates to the server
+
 ustring: Human-Friendly string to identify the device (can be left blank)
+
 server_address: WebSocket address to the server you're running.
 
 ##Notes
