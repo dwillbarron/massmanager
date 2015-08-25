@@ -135,7 +135,7 @@ class Sockdir(object):
         def csock(self):
             pass
         @cherrypy.expose
-        def statsstatic(self, device=None):
+        def stats(self, device=None):
             if (device==None):
                 return pages.noDevice
             else:
