@@ -135,7 +135,7 @@ class Sockdir(object):
         def csock(self):
             pass
         @cherrypy.expose
-        def stats(self, device=None):
+        def statsstatic(self, device=None):
             if (device==None):
                 return pages.noDevice
             else:
@@ -265,6 +265,8 @@ class DeviceContainer(object):
         jsonFile.close()
         if not os.path.exists('devices/logs/' + name + '/'):
             os.makedirs('devices/logs/' + name + '/')
+        if not os.path.isfile('devices/logs/' + name + '/current.csv'):
+            open('devices/logs/' + name + '/current.csv', 'a').close()
         if os.path.getsize(filedir + "current.csv") > MAX_LOG_SIZE:
             try:
                 csvfile = open(filedir + "current.csv")
@@ -279,7 +281,7 @@ class DeviceContainer(object):
             logwriter.writerow([jsonDict['d'], jsonDict['t']])
         self.add_sub_entry(name)
         self.push_to_subs("STA:" + data, name)
-cherrypy.config.update({'server.socket_port': 80})
+cherrypy.config.update({'server.socket_port': 8080})
 cherrypy.config.update({'server.socket_host': "0.0.0.0"})
 WebSocketPlugin(cherrypy.engine).subscribe()
 cherrypy.tools.websocket = WebSocketTool()
